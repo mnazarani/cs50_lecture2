@@ -1,0 +1,16 @@
+{% extends "layout.html" %}  
+
+{% block head %}
+  <h2>New year?</h2>
+{% endblock %}
+
+{% block body %}
+  {% if new_year %}
+      <h1>Yes</h1>
+    {% else %}
+      <h1>No</h1>
+    {% endif %}
+    <p>Go back -> <a href="{{ url_for('index') }}">here</a></p>
+{% endblock %}
+  
+  

@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-  </head>
-  <body>
-    <h2>Hello, there!  {{ tag }}.</h2>
-  </body>
-</html>
+{% extends "layout.html" %}
+
+{% block head %}
+  <h2>Hello, there!  {{ tag }}.</h2>
+{% endblock %}
+
+{% block body %}
+    <p>Do you want to find out something - 
+       <a href="{{ url_for('newyear') }}">here.</a></p>
+       
+       
+    <form action="{{ url_for('hello')}}" method="post">
+      <input type="text" name="name" placeholder="name">
+      <button type="submit" name="button">Submit</button>
+    </form>
+
+{% endblock %}
+    
+  
